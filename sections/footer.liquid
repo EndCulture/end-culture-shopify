@@ -1,5 +1,5 @@
 <section class="footer-info" id="about">
-  <div class="info-panel"><span class="micro">ABOUT</span><h2>END CULTURE</h2><p>END CULTURE is an independent menswear label established in 2026. The first release focuses on graphic T-shirts and headwear with a clean, understated identity.</p><a href="#t-shirts">VIEW THE FIRST COLLECTION →</a></div>
+  <div class="info-panel"><span class="micro">ABOUT</span><h2>END CULTURE</h2><p>END CULTURE is an independent menswear label established in 2026. The first release focuses on graphic T-shirts and headwear with a clean, understated identity.</p><a href="{{ routes.search_url }}?view=t-shirts">VIEW THE FIRST COLLECTION →</a></div>
   <div class="info-grid">
     <article id="shipping"><h3>SHIPPING</h3><p>Orders will ship from the UK when the first collection launches. Delivery options, prices and estimated times will be shown at checkout before payment.</p></article>
     <article id="returns"><h3>RETURNS</h3><p>Return instructions and the applicable return window will be supplied with every order. Items must be returned unworn and in their original condition unless faulty.</p></article>
@@ -10,8 +10,8 @@
   </div>
 </section>
 <footer class="footer">
-  <div><a class="footer-logo" href="{{ routes.root_url }}">END CULTURE®</a><p>BUILT ON MORE.</p><p>EST. 2026</p></div>
-  <div><h3>SHOP</h3><a href="{{ routes.root_url }}">Mens</a><a href="/pages/t-shirts">T-Shirts</a><a href="/pages/hats">Hats</a></div>
+  <div><a class="footer-logo" href="{{ routes.root_url }}">END CULTURE®</a><p>END THE ORDINARY.</p><p>EST. 2026</p></div>
+  <div><h3>SHOP</h3><a href="{{ routes.search_url }}?view=t-shirts">T-Shirts</a><a href="{{ routes.search_url }}?view=hats">Hats</a></div>
   <div><h3>HELP</h3><a href="{{ routes.root_url }}#shipping">Shipping</a><a href="{{ routes.root_url }}#returns">Returns</a><a href="{{ routes.root_url }}#contact">Contact</a><a href="{{ routes.root_url }}#faq">FAQ</a></div>
   <div><h3>ABOUT</h3><a href="{{ routes.root_url }}#about">Our Story</a><a href="{{ routes.root_url }}#privacy">Privacy</a><a href="{{ routes.root_url }}#terms">Terms</a></div>
   <div id="newsletter"><h3>JOIN THE CULTURE</h3><p>Be the first to know when we drop.</p>{% form 'customer' %}<input type="hidden" name="contact[tags]" value="newsletter"><input type="email" name="contact[email]" placeholder="EMAIL ADDRESS" required><button type="submit">JOIN →</button>{% if form.posted_successfully? %}<p>YOU'RE ON THE LIST.</p>{% endif %}{{ form.errors | default_errors }}{% endform %}</div>
