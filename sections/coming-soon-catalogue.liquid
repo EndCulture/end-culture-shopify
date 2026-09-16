@@ -1,0 +1,16 @@
+<section class="catalogue" id="coming-soon">
+  <div class="catalogue-head"><div><span class="micro">END CULTURE / EST. 2026</span><h2>COMING SOON</h2></div><p>THE FIRST COLLECTION</p></div>
+  <div id="t-shirts" class="category-title"><h3>T-SHIRTS</h3><a href="{{ routes.root_url }}#t-shirts">VIEW T-SHIRTS →</a></div>
+  <div class="launch-grid tees-grid">
+    {% assign tees = "7.jpg|CORE LOGO T-SHIRT — BLACK,8.jpg|CORE LOGO T-SHIRT — WHITE,13.jpg|WORLD T-SHIRT — BLACK,14.jpg|WORLD T-SHIRT — BACK PRINT,15.jpg|STRIPE T-SHIRT — NAVY" | split: "," %}
+    {% for item in tees %}{% assign p = item | split: "|" %}
+      <article class="launch-card"><a href="{{ routes.root_url }}#t-shirts"><div class="launch-image {% if forloop.index < 3 %}crop-model{% endif %}"><img src="{{ p[0] | asset_url }}" alt="{{ p[1] | escape }}"><span>COMING SOON</span></div><div class="launch-meta"><strong>{{ p[1] }}</strong><small>COMING SOON</small></div></a></article>
+    {% endfor %}
+  </div>
+  <div id="hats" class="category-title hats-title"><h3>HATS</h3><a href="{{ routes.root_url }}#hats">VIEW HATS →</a></div>
+  <div class="launch-grid hats-grid">
+    <article class="launch-card"><a href="{{ routes.root_url }}#hats"><div class="launch-image hat-image"><img src="{{ '17-white.jpg' | asset_url }}" alt="End Culture black five panel cap"><span>COMING SOON</span></div><div class="launch-meta"><strong>EC 5 PANEL CAP — BLACK</strong><small>COMING SOON</small></div></a></article>
+    <article class="launch-card"><a href="{{ routes.root_url }}#hats"><div class="launch-image hat-image"><img src="{{ '18.jpg' | asset_url }}" alt="End Culture grey five panel cap"><span>COMING SOON</span></div><div class="launch-meta"><strong>WORLD 5 PANEL CAP — GREY</strong><small>COMING SOON</small></div></a></article>
+  </div>
+</section>
+{% schema %}{"name":"Coming Soon Catalogue","settings":[],"presets":[{"name":"Coming Soon Catalogue"}]}{% endschema %}

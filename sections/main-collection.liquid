@@ -1,0 +1,2 @@
+<section class="collection"><div class="collection-head"><p>END CULTURE®</p><h1>{{ collection.title }}</h1><span>{{ collection.products_count }} PIECES</span></div><div class="product-grid">{% paginate collection.products by 24 %}{% for product in collection.products %}{% render 'product-card', product: product %}{% endfor %}{% endpaginate %}</div></section>
+{% schema %}{"name":"Collection","settings":[]}{% endschema %}

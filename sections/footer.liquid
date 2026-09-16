@@ -1,0 +1,20 @@
+<section class="footer-info" id="about">
+  <div class="info-panel"><span class="micro">ABOUT</span><h2>END CULTURE</h2><p>END CULTURE is an independent menswear label established in 2026. The first release focuses on graphic T-shirts and headwear with a clean, understated identity.</p><a href="#t-shirts">VIEW THE FIRST COLLECTION →</a></div>
+  <div class="info-grid">
+    <article id="shipping"><h3>SHIPPING</h3><p>Orders will ship from the UK when the first collection launches. Delivery options, prices and estimated times will be shown at checkout before payment.</p></article>
+    <article id="returns"><h3>RETURNS</h3><p>Return instructions and the applicable return window will be supplied with every order. Items must be returned unworn and in their original condition unless faulty.</p></article>
+    <article id="privacy"><h3>PRIVACY</h3><p>Customer information is used to operate the store, fulfil orders and provide requested updates. Checkout and customer data are handled through Shopify.</p></article>
+    <article id="terms"><h3>TERMS</h3><p>Products shown before launch are marked Coming Soon and are not yet available to purchase. Final product specifications, prices and availability will be confirmed at launch.</p></article>
+    <article id="faq"><h3>FAQ</h3><p><strong>When does END CULTURE launch?</strong><br>The first drop is coming soon. Join the mailing list for release updates.</p><p><strong>What will Drop 001 include?</strong><br>Men's T-shirts and hats.</p></article>
+    <article id="contact"><h3>CONTACT</h3><p>Send END CULTURE a message using the form below.</p>{% form 'contact' %}<input type="text" name="contact[name]" placeholder="NAME" required><input type="email" name="contact[email]" placeholder="EMAIL" required><textarea name="contact[body]" placeholder="MESSAGE" rows="4" required></textarea><button type="submit">SEND MESSAGE →</button>{% if form.posted_successfully? %}<p>MESSAGE SENT. THANK YOU.</p>{% endif %}{{ form.errors | default_errors }}{% endform %}</article>
+  </div>
+</section>
+<footer class="footer">
+  <div><a class="footer-logo" href="{{ routes.root_url }}">END CULTURE®</a><p>BUILT ON MORE.</p><p>EST. 2026</p></div>
+  <div><h3>SHOP</h3><a href="{{ routes.root_url }}">Mens</a><a href="/pages/t-shirts">T-Shirts</a><a href="/pages/hats">Hats</a></div>
+  <div><h3>HELP</h3><a href="{{ routes.root_url }}#shipping">Shipping</a><a href="{{ routes.root_url }}#returns">Returns</a><a href="{{ routes.root_url }}#contact">Contact</a><a href="{{ routes.root_url }}#faq">FAQ</a></div>
+  <div><h3>ABOUT</h3><a href="{{ routes.root_url }}#about">Our Story</a><a href="{{ routes.root_url }}#privacy">Privacy</a><a href="{{ routes.root_url }}#terms">Terms</a></div>
+  <div id="newsletter"><h3>JOIN THE CULTURE</h3><p>Be the first to know when we drop.</p>{% form 'customer' %}<input type="hidden" name="contact[tags]" value="newsletter"><input type="email" name="contact[email]" placeholder="EMAIL ADDRESS" required><button type="submit">JOIN →</button>{% if form.posted_successfully? %}<p>YOU'RE ON THE LIST.</p>{% endif %}{{ form.errors | default_errors }}{% endform %}</div>
+</footer>
+<div class="copyright">© {{ 'now' | date: '%Y' }} END CULTURE. ALL RIGHTS RESERVED. <a href="{{ routes.root_url }}#privacy">PRIVACY</a> · <a href="{{ routes.root_url }}#terms">TERMS</a></div>
+{% schema %}{"name":"Footer","settings":[]}{% endschema %}
