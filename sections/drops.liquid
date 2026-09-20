@@ -1,0 +1,10 @@
+<section class="drops-page">
+  <header class="drops-page-head"><span class="micro">END CULTURE / RELEASE INDEX</span><h1>THE<br>DROPS.</h1><p>Each release gets a number. 001 is open. 002 and 003 stay hidden until it's time.</p></header>
+  <div class="drops-page-grid">
+    <a class="drop-release revealed" href="{{ routes.search_url }}?view=t-shirts"><span>DROP</span><strong>001</strong><div><h2>T-SHIRTS</h2><p>REVEALED / COMING SOON</p><em>ENTER DROP 001 →</em></div></a>
+    <div class="drop-release locked"><span>DROP</span><strong>002</strong><div><h2>—</h2><p>UNREVEALED</p><em>NOT YET.</em></div></div>
+    <div class="drop-release locked"><span>DROP</span><strong>003</strong><div><h2>—</h2><p>UNREVEALED</p><em>STAY CLOSE.</em></div></div>
+  </div>
+  <div class="drops-signup"><span class="micro">DON'T MISS THE NEXT REVEAL</span><h2>KNOW<br>BEFORE<br>EVERYONE.</h2>{% form 'customer' %}<input type="hidden" name="contact[tags]" value="newsletter,drops-interest"><div class="interest-row"><input type="email" name="contact[email]" placeholder="YOUR EMAIL" required><button type="submit">JOIN THE LIST →</button></div>{% if form.posted_successfully? %}<p class="interest-success">YOU'RE ON THE LIST.</p>{% endif %}{{ form.errors | default_errors }}{% endform %}</div>
+</section>
+{% schema %}{"name":"Drops","settings":[]}{% endschema %}
