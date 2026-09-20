@@ -1,8 +1,8 @@
 {% if section.settings.announcement != blank %}<div class="announcement">{{ section.settings.announcement }}</div>{% endif %}
 <header class="site-header">
   <a class="brand-logo" href="{{ routes.root_url }}"><img src="{{ 'end-culture-logo.svg' | asset_url }}" alt="{{ shop.name | escape }}"></a>
-  <button class="menu-toggle" aria-label="Menu">MENU</button>
-  <nav class="nav">
+  <button class="menu-toggle" aria-label="Menu" aria-controls="PrimaryNavigation">MENU</button>
+  <nav class="nav" id="PrimaryNavigation">
     <a href="{{ routes.search_url }}?view=t-shirts">T-SHIRTS</a>
     <a href="{{ routes.search_url }}?view=hats">HATS</a>
     <a href="{{ routes.search_url }}?view=drops">DROPS</a>
