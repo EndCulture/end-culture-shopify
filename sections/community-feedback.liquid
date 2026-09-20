@@ -1,0 +1,17 @@
+<section class="community-page">
+  <div class="community-hero"><span class="micro">END CULTURE / COMMUNITY</span><h1>WHAT SHOULD<br>WE DO NEXT?</h1><p>END CULTURE is being built with the people who wear it. Tell us what you want to see next — products, colours, fits, graphics or anything else.</p></div>
+  <div class="community-form-wrap">
+    {% form 'contact' %}
+      <input type="hidden" name="contact[subject]" value="END CULTURE — Product Feedback">
+      <input type="hidden" name="contact[feedback_type]" value="Product request">
+      <label>YOUR NAME</label><input type="text" name="contact[name]" placeholder="NAME" required>
+      <label>EMAIL</label><input type="email" name="contact[email]" placeholder="EMAIL" required>
+      <label>WHAT SHOULD WE MAKE NEXT?</label>
+      <select name="contact[request]"><option>T-SHIRT</option><option>HOODIE / SWEATSHIRT</option><option>HAT / CAP</option><option>JACKET</option><option>TROUSERS / SHORTS</option><option>ACCESSORIES</option><option>OTHER</option></select>
+      <label>YOUR IDEA</label><textarea name="contact[body]" rows="7" placeholder="COLOUR, FIT, STYLE, GRAPHIC — TELL US WHAT YOU WANT TO SEE." required></textarea>
+      <button type="submit">SEND YOUR IDEA →</button>
+      {% if form.posted_successfully? %}<p class="form-success">IDEA RECEIVED. THANK YOU FOR SHAPING WHAT COMES NEXT.</p>{% endif %}{{ form.errors | default_errors }}
+    {% endform %}
+  </div>
+</section>
+{% schema %}{"name":"Community Feedback","settings":[]}{% endschema %}
