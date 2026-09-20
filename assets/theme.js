@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded',()=>{
   const b=document.querySelector('.menu-toggle'),n=document.querySelector('.nav');
-  if(b&&n)b.addEventListener('click',()=>n.classList.toggle('open'));
+  if(b&&n){b.setAttribute('aria-expanded','false');b.addEventListener('click',()=>{const open=n.classList.toggle('open');b.setAttribute('aria-expanded',open?'true':'false')});}
 
   // Shopify draft-theme previews are identified by preview_theme_id in the URL.
   // Carry that parameter across every internal storefront link so navigation
