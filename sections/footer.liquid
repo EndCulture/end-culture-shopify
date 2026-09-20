@@ -1,15 +1,7 @@
-<section class="footer-info" id="about">
-  <div class="info-panel"><span class="micro">ABOUT</span><h2>END CULTURE</h2><p>END CULTURE is an independent menswear label established in 2026 and operated by Orion GLE Ltd. Built around limited releases, a stripped-back identity and one idea: END THE ORDINARY.</p><a href="{{ routes.search_url }}?view=t-shirts">VIEW THE FIRST COLLECTION →</a></div>
-  <div class="info-grid">
-    <article id="faq"><h3>FAQ</h3><p><strong>When does END CULTURE launch?</strong><br>Drop 001 is coming soon. Join the list and follow the drops below for release updates.</p><p><strong>What is Drop 001?</strong><br>Drop 001 starts with END CULTURE T-shirts, including our first white T-shirt. Product details are being revealed as we get closer to release.</p><p><strong>Will there be more drops?</strong><br>Yes. 001 is only the beginning. Drop 002 and Drop 003 are already on the board — but we're keeping them under wraps for now.</p></article>
-    <article><h3>CONTACT</h3><p>Questions about an order, product or return?</p><a class="footer-action" href="{{ routes.search_url }}?view=contact">CONTACT US →</a></article>
-  </div>
-  <div class="drops-board" id="drops"><div class="drops-head"><span class="micro">END CULTURE / RELEASE ARCHIVE</span><h2>THE DROPS</h2><p>001 IS REVEALED. WHAT COMES NEXT STAYS HIDDEN — FOR NOW.</p></div><div class="drops-grid"><a class="drop-card drop-live" href="{{ routes.search_url }}?view=t-shirts"><span>DROP</span><strong>001</strong><p>T-SHIRTS</p><em>EXPLORE 001 →</em></a><div class="drop-card drop-locked"><span>DROP</span><strong>002</strong><p>CLASSIFIED</p><em>NOT YET.</em></div><div class="drop-card drop-locked"><span>DROP</span><strong>003</strong><p>CLASSIFIED</p><em>STAY CLOSE.</em></div></div></div>
-</section>
 <footer class="footer">
   <div><a class="footer-logo" href="{{ routes.root_url }}">END CULTURE®</a><p>END THE ORDINARY.</p><p>EST. 2026</p></div>
   <div><h3>SHOP</h3><a href="{{ routes.search_url }}?view=t-shirts">T-Shirts</a><a href="{{ routes.search_url }}?view=hats">Hats</a></div>
-  <div><h3>HELP</h3><a href="{{ routes.search_url }}?view=shipping">Shipping</a><a href="{{ routes.search_url }}?view=returns">Returns</a><a href="{{ routes.search_url }}?view=contact">Contact</a><a href="{{ routes.root_url }}#faq">FAQ</a></div>
+  <div><h3>HELP</h3><a href="{{ routes.search_url }}?view=shipping">Shipping</a><a href="{{ routes.search_url }}?view=returns">Returns</a><a href="{{ routes.search_url }}?view=contact">Contact</a><a href="{{ routes.search_url }}?view=faq">FAQ</a></div>
   <div><h3>ABOUT</h3><a href="{{ routes.root_url }}#about">Our Story</a><a href="{{ routes.search_url }}?view=drops">Drops</a><a href="{{ routes.search_url }}?view=privacy">Privacy</a><a href="{{ routes.search_url }}?view=terms">Terms</a></div>
   <div id="newsletter"><h3>JOIN THE CULTURE</h3><p>Be the first to know when we drop.</p>{% form 'customer' %}<input type="hidden" name="contact[tags]" value="newsletter"><input type="email" name="contact[email]" placeholder="EMAIL ADDRESS" required><button type="submit">JOIN →</button>{% if form.posted_successfully? %}<p>YOU'RE ON THE LIST.</p>{% endif %}{{ form.errors | default_errors }}{% endform %}</div>
 </footer>
