@@ -1,7 +1,20 @@
 <section class="collection catalogue">
   <div class="collection-head"><div><span class="micro">END CULTURE / MENSWEAR</span><h1>T-SHIRTS</h1></div><p>DROP 001 / COMING SOON</p></div>
   <div class="launch-grid tees-grid">
-    <article class="launch-card launch-card-reveal"><div class="launch-image reveal-image"><img src="{{ 'White T Shirt.png' | asset_url }}" alt="END CULTURE white T-shirt"><span>COMING SOON</span></div><div class="launch-meta"><strong>END CULTURE T-SHIRT — WHITE</strong><small>COMING SOON</small></div></article>
+    <article class="launch-card launch-card-reveal">
+      <div class="launch-image reveal-image"><img src="{{ 'White T Shirt.png' | asset_url }}" alt="END CULTURE white T-shirt"><span>COMING SOON</span></div>
+      <div class="launch-meta"><strong>END CULTURE T-SHIRT — WHITE</strong><small>COMING SOON</small></div>
+      <div class="interest-box">
+        <p>BE FIRST TO KNOW WHEN IT DROPS.</p>
+        {% form 'customer' %}
+          <input type="hidden" name="contact[tags]" value="newsletter,white-tshirt-interest">
+          <input type="hidden" name="contact[note]" value="Interest: END CULTURE T-Shirt — White">
+          <div class="interest-row"><input type="email" name="contact[email]" placeholder="YOUR EMAIL" aria-label="Email address" required><button type="submit">REGISTER INTEREST →</button></div>
+          {% if form.posted_successfully? %}<p class="interest-success">YOU'RE ON THE LIST. WE'LL LET YOU KNOW.</p>{% endif %}
+          {{ form.errors | default_errors }}
+        {% endform %}
+      </div>
+    </article>
     {% assign tees = "7.jpg|CORE LOGO T-SHIRT — BLACK,13.jpg|WORLD T-SHIRT — BLACK,14.jpg|WORLD T-SHIRT — BACK PRINT,15.jpg|STRIPE T-SHIRT — NAVY" | split: "," %}
     {% for item in tees %}{% assign p = item | split: "|" %}<article class="launch-card"><div class="launch-image {% if forloop.first %}crop-model{% endif %}"><img src="{{ p[0] | asset_url }}" alt="{{ p[1] | escape }}"><span>COMING SOON</span></div><div class="launch-meta"><strong>{{ p[1] }}</strong><small>COMING SOON</small></div></article>{% endfor %}
   </div>
