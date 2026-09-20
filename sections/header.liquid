@@ -3,12 +3,11 @@
   <a class="brand-logo" href="{{ routes.root_url }}"><img src="{{ 'end-culture-logo.svg' | asset_url }}" alt="{{ shop.name | escape }}"></a>
   <button class="menu-toggle" aria-label="Menu">MENU</button>
   <nav class="nav">
-    <a href="{{ routes.root_url }}">HOME</a>
     <a href="{{ routes.search_url }}?view=t-shirts">T-SHIRTS</a>
-    <a href="{{ routes.search_url }}?view=hats">HATS</a><a href="{{ routes.root_url }}#drops">DROPS</a>
-    <a href="{{ routes.search_url }}?view=feedback">FEEDBACK</a>
-    <a href="{{ routes.search_url }}?view=reviews">REVIEWS</a>
+    <a href="{{ routes.search_url }}?view=hats">HATS</a>
+    <a href="{{ routes.search_url }}?view=drops">DROPS</a>
+    <a href="{{ routes.root_url }}#about">ABOUT</a>
   </nav>
   <a class="cart-link" href="{{ routes.cart_url }}">BAG ({{ cart.item_count }})</a>
 </header>
-{% schema %}{"name":"Header","settings":[{"type":"text","id":"announcement","label":"Announcement","default":"END CULTURE — MENSWEAR / DROP 001 COMING SOON"}]}{% endschema %}
+{% schema %}{"name":"Header","settings":[{"type":"text","id":"announcement","label":"Announcement","default":"DROP 001 — T-SHIRTS / COMING SOON"}]}{% endschema %}
