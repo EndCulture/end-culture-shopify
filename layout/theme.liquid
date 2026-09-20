@@ -1,7 +1,9 @@
 <!doctype html>
 <html lang="{{ request.locale.iso_code }}">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="{% if page_description %}{{ page_description | escape }}{% else %}END CULTURE — limited menswear drops. END THE ORDINARY.{% endif %}">
+  <link rel="canonical" href="{{ canonical_url }}">
   <title>{{ page_title }}{% unless page_title contains shop.name %} — {{ shop.name }}{% endunless %}</title>
   {{ content_for_header }}
   {{ 'base.css' | asset_url | stylesheet_tag }}
@@ -9,7 +11,7 @@
 </head>
 <body>
   {% section 'header' %}
-  <main id="MainContent">{{ content_for_layout }}</main>
+  <main id="MainContent" tabindex="-1">{{ content_for_layout }}</main>
   {% section 'footer' %}
 </body>
 </html>
