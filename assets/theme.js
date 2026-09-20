@@ -2,6 +2,15 @@ document.addEventListener('DOMContentLoaded',()=>{
   const b=document.querySelector('.menu-toggle'),n=document.querySelector('.nav');
   if(b&&n){b.setAttribute('aria-expanded','false');b.addEventListener('click',()=>{const open=n.classList.toggle('open');b.setAttribute('aria-expanded',open?'true':'false')});}
 
+
+  const storyLink=document.querySelector('[data-story-link]');
+  if(storyLink){
+    storyLink.addEventListener('click',e=>{
+      const story=document.getElementById('about');
+      if(story){e.preventDefault();story.scrollIntoView({behavior:'smooth',block:'start'});if(n)n.classList.remove('open');if(b)b.setAttribute('aria-expanded','false');}
+    });
+  }
+
   // Shopify draft-theme previews are identified by preview_theme_id in the URL.
   // Carry that parameter across every internal storefront link so navigation
   // stays on this GitHub-connected draft theme instead of falling back to the
