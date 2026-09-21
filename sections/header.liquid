@@ -1,8 +1,8 @@
 {% if section.settings.announcement != blank %}<div class="announcement">{{ section.settings.announcement }}</div>{% endif %}
 <header class="site-header">
   <div class="header-home"><a href="/">HOME</a></div>
-  <button class="menu-toggle" aria-label="Menu" aria-controls="PrimaryNavigation">MENU</button>
-  <nav class="nav" id="PrimaryNavigation">
+  <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="PrimaryNavigation" aria-expanded="false">MENU</button>
+  <nav class="nav" id="PrimaryNavigation" aria-label="Primary navigation">
     <a href="/">HOME</a>
     <a href="{{ routes.search_url }}?view=t-shirts">T-SHIRTS</a>
     <a href="{{ routes.search_url }}?view=hats">HATS</a>
