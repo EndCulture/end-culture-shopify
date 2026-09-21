@@ -88,3 +88,8 @@ body{font-smoothing:antialiased;-webkit-font-smoothing:antialiased}.site-header{
 
 /* Compact homepage campaign hero */
 .template-index .hero{height:clamp(360px,52vh,560px)!important;min-height:0!important;background-position:68% 42%!important}.template-index .hero-copy{inset:auto clamp(20px,4vw,58px) clamp(22px,4vw,42px)!important}.template-index .hero h1{font-size:clamp(48px,7vw,108px)!important;max-width:900px!important;margin:14px 0 22px!important}.template-index .hero-bottom{padding-top:14px!important}@media(max-width:800px){.template-index .hero{height:440px!important;min-height:0!important;background-position:68% center!important}.template-index .hero-copy{inset:auto 20px 22px!important}.template-index .hero h1{font-size:clamp(48px,14vw,68px)!important;margin-bottom:20px!important}}
+
+/* Homepage hero compact — use actual Shopify body context */
+body:has(.home-drop) .hero{height:500px!important;min-height:500px!important;max-height:500px!important}
+body:has(.home-drop) .hero h1{font-size:clamp(48px,7vw,105px)!important;margin:14px 0 22px!important}
+@media(max-width:800px){body:has(.home-drop) .hero{height:400px!important;min-height:400px!important;max-height:400px!important}body:has(.home-drop) .hero h1{font-size:clamp(46px,14vw,66px)!important}}
