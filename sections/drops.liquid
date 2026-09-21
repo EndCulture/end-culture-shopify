@@ -5,6 +5,14 @@
     <div class="drop-release locked"><span>DROP / LOCKED</span><strong>002</strong><div><h2>UNREVEALED</h2><p>DETAILS WITHHELD</p><em>NOT YET.</em></div></div>
     <div class="drop-release locked"><span>DROP / LOCKED</span><strong>003</strong><div><h2>UNREVEALED</h2><p>DETAILS WITHHELD</p><em>STAY CLOSE.</em></div></div>
   </div>
+  <section class="drop-archive">
+    <div class="drop-archive-head"><span class="micro">END CULTURE / PERMANENT RECORD</span><h2>THE ARCHIVE.</h2><p>Every END CULTURE release gets a number. Once a drop is released, it stays here as part of the record.</p></div>
+    <div class="drop-archive-list">
+      <a href="{{ routes.search_url }}?view=t-shirts"><span>001</span><strong>T-SHIRTS</strong><small>2026 / CURRENT DROP</small><em>VIEW 001 →</em></a>
+      <div class="archive-locked"><span>002</span><strong>LOCKED</strong><small>UNRELEASED</small><em>—</em></div>
+      <div class="archive-locked"><span>003</span><strong>LOCKED</strong><small>UNRELEASED</small><em>—</em></div>
+    </div>
+  </section>
   <div class="drops-signup"><span class="micro">DON'T MISS THE NEXT REVEAL</span><h2>KNOW<br>BEFORE<br>EVERYONE.</h2>{% form 'customer' %}<input type="hidden" name="contact[tags]" value="newsletter,drops-interest"><div class="interest-row"><input type="email" name="contact[email]" placeholder="YOUR EMAIL" required><button type="submit">JOIN THE LIST →</button></div>{% if form.posted_successfully? %}<p class="interest-success">YOU'RE ON THE LIST.</p>{% endif %}{{ form.errors | default_errors }}{% endform %}</div>
 </section>
 {% schema %}{"name":"Drops","settings":[]}{% endschema %}
