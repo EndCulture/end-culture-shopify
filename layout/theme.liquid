@@ -4,6 +4,17 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0a0a0a">
   <meta name="description" content="{% if page_description %}{{ page_description | escape }}{% else %}END CULTURE — limited menswear drops. END THE ORDINARY.{% endif %}">
   <link rel="canonical" href="{{ canonical_url }}">
+  <link rel="icon" type="image/svg+xml" href="{{ 'ec-favicon.svg' | asset_url }}">
+  <meta property="og:site_name" content="END CULTURE">
+  <meta property="og:title" content="{{ page_title | default: 'END CULTURE' | escape }}">
+  <meta property="og:description" content="{% if page_description %}{{ page_description | escape }}{% else %}END CULTURE — END THE ORDINARY.{% endif %}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ 'end-culture-social.svg' | asset_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page_title | default: 'END CULTURE' | escape }}">
+  <meta name="twitter:description" content="{% if page_description %}{{ page_description | escape }}{% else %}END CULTURE — END THE ORDINARY.{% endif %}">
+  <meta name="twitter:image" content="{{ 'end-culture-social.svg' | asset_url }}">
   <title>{{ page_title }}{% unless page_title contains shop.name %} — {{ shop.name }}{% endunless %}</title>
   {{ content_for_header }}
   {{ 'base.css' | asset_url | stylesheet_tag }}
