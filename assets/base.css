@@ -93,3 +93,10 @@ body{font-smoothing:antialiased;-webkit-font-smoothing:antialiased}.site-header{
 body:has(.home-drop) .hero{height:500px!important;min-height:500px!important;max-height:500px!important}
 body:has(.home-drop) .hero h1{font-size:clamp(48px,7vw,105px)!important;margin:14px 0 22px!important}
 @media(max-width:800px){body:has(.home-drop) .hero{height:400px!important;min-height:400px!important;max-height:400px!important}body:has(.home-drop) .hero h1{font-size:clamp(46px,14vw,66px)!important}}
+
+/* Professional compact hero headline placement */
+body:has(.home-drop) .hero-copy{left:clamp(24px,5vw,80px)!important;right:clamp(24px,5vw,80px)!important;bottom:28px!important}
+body:has(.home-drop) .hero-heading-wrap{max-width:62%;margin-bottom:26px}
+body:has(.home-drop) .hero-heading-wrap h1{font-size:clamp(42px,5.5vw,82px)!important;line-height:.82!important;letter-spacing:-.065em!important;margin:0!important;max-width:100%!important}
+body:has(.home-drop) .hero-bottom{margin-top:0!important}
+@media(max-width:800px){body:has(.home-drop) .hero-copy{left:20px!important;right:20px!important;bottom:20px!important}body:has(.home-drop) .hero-heading-wrap{max-width:78%;margin-bottom:20px}body:has(.home-drop) .hero-heading-wrap h1{font-size:clamp(38px,11vw,54px)!important;line-height:.86!important}}
