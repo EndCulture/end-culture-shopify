@@ -2,7 +2,7 @@
   <div><a class="footer-logo" href="{{ routes.root_url }}">END CULTURE®</a><p>END THE ORDINARY.</p><p>EST. 2026</p></div>
   <div><h3>SHOP</h3><a href="{{ routes.search_url }}?view=t-shirts">T-Shirts</a><a href="{{ routes.search_url }}?view=hats">Hats</a></div>
   <div><h3>HELP</h3><a href="{{ routes.search_url }}?view=shipping">Shipping</a><a href="{{ routes.search_url }}?view=returns">Returns</a><a href="{{ routes.search_url }}?view=contact">Contact</a><a href="{{ routes.search_url }}?view=faq">FAQ</a></div>
-  <div><h3>ABOUT</h3><a href="{{ routes.search_url }}?view=drops">Drops</a><a href="{{ routes.search_url }}?view=privacy">Privacy</a><a href="{{ routes.search_url }}?view=terms">Terms</a></div>
+  <div><h3>ABOUT</h3><a href="{{ routes.search_url }}?view=drops">Drops</a><a href="https://www.instagram.com/endculture26/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="{{ routes.search_url }}?view=privacy">Privacy</a><a href="{{ routes.search_url }}?view=terms">Terms</a></div>
   <div id="newsletter"><h3>JOIN THE CULTURE</h3><p>Be the first to know when we drop.</p>{% form 'customer' %}<input type="hidden" name="contact[tags]" value="newsletter"><input type="email" name="contact[email]" placeholder="EMAIL ADDRESS" required><button type="submit">JOIN →</button>{% if form.posted_successfully? %}<p>YOU'RE ON THE LIST.</p>{% endif %}{{ form.errors | default_errors }}{% endform %}</div>
 </footer>
 <div class="copyright">© {{ 'now' | date: '%Y' }} END CULTURE. ALL RIGHTS RESERVED. <a href="{{ routes.search_url }}?view=privacy">PRIVACY</a> · <a href="{{ routes.search_url }}?view=terms">TERMS</a></div>
