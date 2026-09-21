@@ -1,20 +1,18 @@
 <section class="early-access" id="early-access">
-  <div class="early-access-copy">
-    <span class="micro">END CULTURE / EARLY ACCESS</span>
-    <h2>GET IN<br>BEFORE<br>THE DROP.</h2>
-  </div>
-  <div class="early-access-form">
-    <p>Join the END CULTURE list for Drop 001 release details, product reveals and early-access updates.</p>
+  <div class="early-access-inner">
+    <span class="micro">DROP 001 / EARLY ACCESS</span>
+    <h2>FIRST IN.</h2>
+    <p>Release details. Early access. Nothing else.</p>
     {% form 'customer' %}
       <input type="hidden" name="contact[tags]" value="newsletter,early-access,drop-001">
       <div class="early-access-row">
         <input type="email" name="contact[email]" placeholder="EMAIL ADDRESS" aria-label="Email address" required>
-        <button type="submit">GET EARLY ACCESS →</button>
+        <button type="submit">JOIN THE LIST →</button>
       </div>
-      {% if form.posted_successfully? %}<p class="early-access-success">YOU'RE IN. WATCH YOUR INBOX.</p>{% endif %}
+      {% if form.posted_successfully? %}<p class="early-access-success">YOU'RE IN.</p>{% endif %}
       {{ form.errors | default_errors }}
     {% endform %}
-    <small>DROP 001 / RELEASE DATE TBC</small>
+    <small>EC001 / DROP 001 / RELEASE TBC</small>
   </div>
 </section>
 {% schema %}{"name":"Early Access","settings":[]}{% endschema %}
