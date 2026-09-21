@@ -106,3 +106,43 @@ body:has(.home-drop) .hero-bottom{margin-top:0!important}
 
 /* END CULTURE custom 404 */
 .error-404{min-height:72vh;display:flex;align-items:center;padding:clamp(60px,9vw,130px) clamp(28px,7vw,120px);border-bottom:1px solid #aaa}.error-404-inner{width:100%;max-width:1180px;margin:0 auto}.error-404-code{font-size:clamp(110px,22vw,320px);font-weight:900;letter-spacing:-.09em;line-height:.72;margin:clamp(45px,7vw,90px) 0 38px}.error-404 h1{font-size:clamp(44px,7vw,96px);line-height:.88;letter-spacing:-.065em;margin:0 0 30px}.error-404 p{max-width:500px;font-size:13px;line-height:1.7;margin:0 0 34px}.error-404-actions{display:flex;align-items:center;gap:30px}.error-404-link{font-size:10px;font-weight:800;letter-spacing:.14em;border-bottom:1px solid;padding-bottom:5px}@media(max-width:800px){.error-404{min-height:68vh;padding:60px 20px 75px}.error-404-code{margin:45px 0 30px}.error-404-actions{align-items:flex-start;flex-direction:column;gap:24px}}
+
+/* Final site QA: consistent containment, mobile flow and accessible interaction */
+:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+button,input,a{font:inherit}
+input{min-width:0}
+.header-home a,.nav a,.cart-link{white-space:nowrap}
+.hat-editorial-card>div{flex-wrap:wrap}.hat-editorial-card .ec-card-ref{flex:0 0 100%;width:max-content}
+.drop-release.drop-coming{cursor:default}
+.archive-row.archive-upcoming{opacity:.72}
+.policy-page,.journal-page,.drops-page,.shirt-detail-page,.catalogue{overflow:hidden}
+@media(max-width:800px){
+ .site-header{grid-template-columns:1fr auto auto}
+ .header-home{display:none}
+ .nav>a:first-child{display:block}
+ .cart-link{white-space:nowrap}
+ .hero{height:400px!important;min-height:400px!important;max-height:400px!important}
+ .hero-bottom{width:100%;gap:16px}
+ .hero-bottom .button{width:100%;text-align:center}
+ .early-access-row,.interest-row{display:flex;flex-direction:column}
+ .early-access-row input,.early-access-row button,.interest-row input,.interest-row button{width:100%;min-height:48px}
+ .launch-grid,.tees-grid{grid-template-columns:1fr 1fr}
+ .hat-editorial{grid-template-columns:1fr}
+ .hat-editorial-message>div{min-height:280px}
+ .notify-strip{grid-template-columns:1fr;gap:14px}
+ .notify-strip strong,.notify-strip a{text-align:left}
+ .drops-page-grid{grid-template-columns:1fr}
+ .archive-row{grid-template-columns:54px 1fr auto;gap:12px}
+ .archive-row .archive-year,.archive-row .archive-status{display:none}
+ .journal-entry-featured{grid-template-columns:1fr}
+ .shirt-detail-page{grid-template-columns:1fr}
+ .shirt-detail-info{padding-left:20px;padding-right:20px}
+ .policy-page{padding-left:20px;padding-right:20px}
+}
+@media(max-width:520px){
+ .launch-grid,.tees-grid{grid-template-columns:1fr}
+ .collection-head{gap:14px}
+ .collection-head p{margin:0}
+ .footer{grid-template-columns:1fr}
+ .footer>div:first-child,.footer>div:last-child{grid-column:auto}
+}
