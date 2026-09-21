@@ -52,3 +52,6 @@ body{font-smoothing:antialiased;-webkit-font-smoothing:antialiased}.site-header{
 
 /* Our Story hierarchy */
 .brand-story-editorial .story-title{font-size:clamp(52px,7vw,96px);line-height:.85;letter-spacing:-.065em;margin:0 0 48px;font-weight:800}.brand-story-editorial .story-body>p:first-of-type{max-width:620px!important;margin:0 auto 24px!important;font-size:15px!important;line-height:1.75!important;font-weight:400!important;letter-spacing:normal!important}@media(max-width:800px){.brand-story-editorial .story-title{font-size:58px;margin-bottom:34px}.brand-story-editorial .story-body>p:first-of-type{max-width:100%!important}}
+
+/* Drop 001 release countdown placeholder */
+.drop-countdown-tbc{width:100%;max-width:520px;border-top:1px solid #111;border-bottom:1px solid #111;margin:34px 0 4px;padding:16px 0;display:grid;grid-template-columns:1fr auto;gap:7px 24px;align-items:end}.drop-countdown-tbc span,.drop-countdown-tbc small{font-size:9px;font-weight:800;letter-spacing:.16em}.drop-countdown-tbc strong{grid-row:1/3;grid-column:2;font-size:42px;line-height:.8;letter-spacing:-.04em}.drop-countdown-tbc small{font-size:8px;color:#666}@media(max-width:800px){.drop-countdown-tbc{margin-top:28px}.drop-countdown-tbc strong{font-size:36px}}
